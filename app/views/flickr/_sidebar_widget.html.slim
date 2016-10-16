@@ -1,0 +1,5 @@
+.container-fluid
+  .card-columns
+      - photos.each do |photo|
+        .card
+          = image_tag(FlickRaw.url_b(photo), title: photo.title, class: "card-img img-fluid")
