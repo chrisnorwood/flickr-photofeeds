@@ -1,9 +1,6 @@
-body {
-  padding-top: 115px;
-}
-
 .navbar {
   background-color: #e3f2fd;
+  margin-bottom: 0.5em;
 }
 
 .navbar-brand {
@@ -11,5 +8,11 @@ body {
   padding-left: 1em;
   span {
     color: #000;
+  }
+}
+
+small {
+  span {
+    padding-left: 15px;
   }
 }

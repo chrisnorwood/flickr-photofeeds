@@ -1,11 +1,18 @@
-nav class="navbar navbar-fixed-top navbar-dark" role="navigation"
+nav class="navbar navbar-default navbar-dark" role="navigation"
   .col-md-6
     h1.navbar-brand: span Enter a Flickr ID
-    small: a href="http://idgettr.com/" What's my id?
+    small
+      a href="http://idgettr.com/" What's my id?
     = form_tag(root_url, method: :get, class: 'navbar-form navbar-left')
       .input-group
         = text_field_tag :user_id, nil, placeholder: "67741638@N06", class: 'form-control'
         .input-group-btn
           = submit_tag "Search", class: 'btn btn-default'
+  .pull-xs-right
+    small
+      span
+        em
+          | Chris Norwood | 2016 | 
+          a href="https://github.com/chrisnorwood/flickr-photofeeds" (Find on Github)
 - cache('flickr') do
   = render_flickr(@user_id)
